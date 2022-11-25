@@ -1,0 +1,78 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    
+    <!-- Position Column -->
+    <ng-container matColumnDef="I_ORDER">
+      <th mat-header-cell *matHeaderCellDef> I_ORDER. </th>
+      <td mat-cell *matCellDef="let element"> {{element.I_ORDER}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="C_STATUS">
+      <th mat-header-cell *matHeaderCellDef> C_STATUS </th>
+      <td mat-cell *matCellDef="let element"> {{element.C_STATUS}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="I_DETAIL">
+      <th mat-header-cell *matHeaderCellDef> I_DETAIL </th>
+      <td mat-cell *matCellDef="let element"> {{element.I_DETAIL}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="C_PROCESSING">
+      <th mat-header-cell *matHeaderCellDef> C_PROCESSING </th>
+      <td mat-cell *matCellDef="let element"> {{element.C_PROCESSING}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="C_ROUND_TYPE">
+      <th mat-header-cell *matHeaderCellDef> C_ROUND_TYPE </th>
+      <td mat-cell *matCellDef="let element"> {{element.C_ROUND_TYPE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="D_CREATE">
+      <th mat-header-cell *matHeaderCellDef> D_CREATE </th>
+      <td mat-cell *matCellDef="let element"> {{element.D_CREATE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="D_CHANGE">
+      <th mat-header-cell *matHeaderCellDef> D_CHANGE </th>
+      <td mat-cell *matCellDef="let element"> {{element.D_CHANGE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="D_TIMESTAMP">
+      <th mat-header-cell *matHeaderCellDef> D_TIMESTAMP </th>
+      <td mat-cell *matCellDef="let element"> {{element.D_TIMESTAMP}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="C_CANCEL_REASON">
+      <th mat-header-cell *matHeaderCellDef> C_CANCEL_REASON </th>
+      <td mat-cell *matCellDef="let element"> {{element.C_CANCEL_REASON}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="C_SEND_EDN">
+      <th mat-header-cell *matHeaderCellDef> C_SEND_EDN </th>
+      <td mat-cell *matCellDef="let element"> {{element.C_SEND_EDN}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="D_SEND_EDN">
+      <th mat-header-cell *matHeaderCellDef> D_SEND_EDN </th>
+      <td mat-cell *matCellDef="let element"> {{element.D_SEND_EDN}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Update">
+      <th mat-header-cell *matHeaderCellDef> Update </th>
+      <td mat-cell *matCellDef="let element"> <button>update</button> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Delete">
+      <th mat-header-cell *matHeaderCellDef> delete </th>
+      <td mat-cell *matCellDef="let element"> <button>delete</button> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>
+
